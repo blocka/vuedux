@@ -1,7 +1,7 @@
 // @flow
 import type {Component} from './flow-declarations/vue';
 import type {ConnectCreator} from './flow-declarations/vuedux';
-import {normalizeProps} from './utils';
+import {normalizeProps, getOptions} from './utils';
 
 const connectCreator: ConnectCreator = (mapStateToProps, mapDispatchToProps) =>
   (component: Component) => ({
@@ -10,7 +10,7 @@ const connectCreator: ConnectCreator = (mapStateToProps, mapDispatchToProps) =>
     data: () => ({
       state: null,
     }),
-    props: {...normalizeProps(component.props)},
+    props: {...normalizeProps(getOptions(component).props)},
     render(h) {
       return h(component, {
         on: this._events,
