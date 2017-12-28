@@ -1,7 +1,7 @@
 // @flow
 export const getOptions = (component: any) => 
   typeof component === 'function'
-    ? component.option 
+    ? component.options
     : component
 
 export const normalizeProps = (map: any): any => (

@@ -240,7 +240,7 @@
             return t;
         };
         e.getOptions = function(t) {
-            return "function" == typeof t ? t.option : t;
+            return "function" == typeof t ? t.options : t;
         }, e.normalizeProps = function(t) {
             return Array.isArray(t) ? t.reduce(function(t, e) {
                 return o({}, t, n({}, e, {
