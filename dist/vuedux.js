@@ -132,7 +132,7 @@
                     render: function(t) {
                         return t(r, {
                             on: this._events,
-                            props: n({}, this.$options.propsData, this.stateToProps, this.dispatchToProps),
+                            props: n({}, this.$props, this.stateToProps, this.dispatchToProps),
                             scopedSlots: this.$scopedSlots
                         }, this.$slots.default);
                     },
